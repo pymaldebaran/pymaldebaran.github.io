@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Pierre-Yves Martin pym.aldebaran@gmail.com">
+  <title>Mentoring Python - Phase 1</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Mentoring Python - Phase 1</h1>
+  <p class="author">Pierre-Yves Martin <a href="mailto:pym.aldebaran@gmail.com">pym.aldebaran@gmail.com</a></p>
+  <p class="date">3 septembre 2017</p>
+</section>
+
+<section id="les-objectifs-à-long-terme" class="slide level2">
+<h2>Les objectifs à long terme</h2>
+<ul>
+<li class="fragment">Programmer : Python</li>
+<li class="fragment">Bosser à plusieurs : GIT</li>
+<li class="fragment">Bien bosser : bonne pratiques</li>
+</ul>
+<div class="fragment">
+<p>On verra à chaque phase où on en est sur tout ça…</p>
+</div>
+</section>
+<section id="les-objectifs-de-cette-phase" class="slide level2">
+<h2>Les objectifs de cette phase</h2>
+<ul>
+<li class="fragment">Écrire un premier micro programme</li>
+<li class="fragment">Décrire le projet</li>
+<li class="fragment">Trouver les premières étapes techniques</li>
+<li class="fragment">Bosser par mail avant de bosser sur GIT</li>
+</ul>
+</section>
+<section id="écrire-un-premier-micro-programme" class="slide level2">
+<h2>Écrire un premier micro programme</h2>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span> <span class="st">&#39;Hello les amis des serpents&#39;</span>
+Hello les amis des serpents</code></pre></div>
+<div class="fragment">
+<p>et qu’on transformera en un joli fichier :</p>
+</div>
+<div class="fragment">
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#!/usr/bin/env python</span>
+
+<span class="kw">def</span> main():
+  <span class="bu">print</span> <span class="st">&quot;Hellos les amis des serpents&quot;</span>
+
+<span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:
+  main()</code></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>C’est pour ça que tu devais lire le chapitre 1 du bouquin sur python !</p>
+</section>
+<section id="décrire-le-projet" class="slide level2">
+<h2>Décrire le projet</h2>
+<p>Il va falloir que tu décrive ton projet à toi</p>
+<ul>
+<li class="fragment">une page max</li>
+<li class="fragment">pas de descripton technique</li>
+<li class="fragment">description de ce que ça doit faire</li>
+<li class="fragment">pas d’historique ou de pourquoi (mais tu peux écrire ça dans un autre doc d’une page aussi)</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>Aller hop tu as une semaine pour faire ça !</p>
+</section>
+<section id="trouver-les-première-étapes-technique" class="slide level2">
+<h2>Trouver les première étapes technique</h2>
+<p>À partir de ton doc je vais trouver qu’est ce qu’on peut faire en premier.</p>
+</section>
+<section class="slide level2">
+
+<p>Je vais faire en sorte qe ça soit intéressant du point de vue didactique :</p>
+<ul>
+<li class="fragment">pas trop complexe techniquement</li>
+<li class="fragment">mais tout de même qui t’apprend de nouvelles choses</li>
+<li class="fragment">rapide à faire</li>
+</ul>
+</section>
+<section id="bosser-par-mail-avant-de-bosser-sur-git" class="slide level2">
+<h2>Bosser par mail avant de bosser sur GIT</h2>
+<p>On ne va pas utiliser GIT pour cette première partie.</p>
+<div class="fragment">
+<p>On va utiliser la bête communication par mail pour s’échanger des fichier texte.</p>
+</div>
+<div class="fragment">
+<p>Ça permet de bien voir quel est l’intéret de GIT après.</p>
+</div>
+</section>
+<section id="ce-qui-sera-produit" class="slide level2">
+<h2>Ce qui sera produit</h2>
+<ul>
+<li class="fragment">un fichier <code>hello_python.py</code> avec ton premier programme</li>
+<li class="fragment">un fichier <code>README.txt</code> avec : la description de ton projet, l’historique de ton projet (si tu veux), ma description des première étapes techniques</li>
+<li class="fragment">un fichier <code>ton_projet.py</code> avec le début de ton code</li>
+</ul>
+</section>
+<section id="des-questions" class="slide level2">
+<h2>Des questions ?</h2>
+<blockquote>
+<p>Your one and only source into the scandalous lives of Manhattan’s elite</p>
+</blockquote>
+<p><a href="mailto:pym.aldebaran@gmail.com">pym.aldebaran@gmail.com</a></p>
+<p>😉</p>
+</section>
+<section class="slide level2">
+
+<figure>
+<img src="img/CC-BY-SA_icon.png" alt="Licence Creative Commons BY-SA" /><figcaption>Licence Creative Commons BY-SA</figcaption>
+</figure>
+<p>Ce document est mis à disposition selon les termes de la <a href="http://creativecommons.org/licenses/by-sa/3.0/fr/">Licence Creative Commons Attribution - Partage dans les Mêmes Conditions 3.0 France</a>.</p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Parallax background image
+        parallaxBackgroundImage: 'img/wallpaper_python_iron_dark.png', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+        // Parallax background size
+        parallaxBackgroundSize: '1980px 1024px', // CSS syntax, e.g. "2100px 900px"
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

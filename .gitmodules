@@ -1,0 +1,3 @@
+[submodule "mentoring_python/phase 1/reveal.js"]
+	path = mentoring_python/phase 1/reveal.js
+	url = https://github.com/hakimel/reveal.js.git
